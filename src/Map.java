@@ -19,11 +19,7 @@ private int[][] map;
 		 }
 	 }
 	 
-	 for(int i = 0; i < Math.sqrt(map.length); i++){
-		 int rx = (int) (Math.random()*(map.length - 2)) + 1;
-		 int ry = (int) (Math.random()*(map[0].length  - 2)) + 1;
-		 setAtPos(rx, ry, 6);
-	 }
+	 
  }
  
  public void generateOutline(){

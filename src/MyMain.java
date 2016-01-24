@@ -29,7 +29,7 @@ public class MyMain {
 
 				//maps.add(new Map(x, y));
 				map=new Map(x,y);
-				generator = new Generate(map);
+				generator = new Generate(map,1);
 
 				if (oneCount(map)) {
 
