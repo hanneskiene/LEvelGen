@@ -6,7 +6,8 @@ public class MyMain {
 	Export export;
 	int x = 20;
 	int y = 20;
-	ArrayList<Map> maps = new ArrayList<>();
+	//ArrayList<Map> maps = new ArrayList<>();
+	Map map;
 
 	public static void main(String[] args) {
 
@@ -26,25 +27,25 @@ public class MyMain {
 			y = z;
 			do {
 
-				maps.add(new Map(x, y));
+				//maps.add(new Map(x, y));
+				map=new Map(x,y);
+				generator = new Generate(map);
 
-				generator = new Generate(maps.get(i));
-
-				if (oneCount(maps.get(i))) {
+				if (oneCount(map)) {
 
 					//maps.get(i).draw();
-					export.printMap(maps.get(i));
+					export.printMap(map);
 
 					counts++;
 
 				}
 
-				i++;
+				
 
 			} while (counts < 10);
 			counts = 0;
-			maps.clear();
-			i = 0;
+			
+			
 			System.out.println("Gefunden " + z);
 		}
 
