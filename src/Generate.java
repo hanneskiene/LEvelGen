@@ -9,7 +9,7 @@ public class Generate {
 		for(int i = 0; i < seedCount; i++){
 			 int rx = (int) (Math.random()*(map.getMap().length - 2)) + 1;
 			 int ry = (int) (Math.random()*(map.getMap()[0].length  - 2)) + 1;
-			 map.setAtPos(rx, ry, 6);
+			 map.setAtPos(rx, ry, 0);
 		 }
 		for (int i = 0; i < 5000; i++){
 			head.move();

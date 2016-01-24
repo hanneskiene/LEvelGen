@@ -22,14 +22,14 @@ public class MyMain {
 		int counts = 0;
 		int i = 0;
 
-		for (int z = 10; z < 21; z = z + 2) {
+		for (int z = 15; z < 16; z = z + 2) {
 			x = z;
 			y = z;
 			do {
 
 				//maps.add(new Map(x, y));
 				map=new Map(x,y);
-				generator = new Generate(map,1);
+				generator = new Generate(map,5);
 
 				if (oneCount(map)) {
 
@@ -42,7 +42,7 @@ public class MyMain {
 
 				
 
-			} while (counts < 10);
+			} while (counts < 100);
 			counts = 0;
 			
 			
@@ -64,7 +64,7 @@ public class MyMain {
 		}
 		// System.out.println((count/((x-2)*(y-2)) ));
 		// 0.3 -0.2
-		if (((double) count / (((double) x - 2) * ((double) y - 2))) < 0.4
+		if (((double) count / (((double) x - 2) * ((double) y - 2))) < 0.3
 				&& ((double) count / (((double) x - 2) * ((double) y - 2))) > 0.2) {
 			return true;
 		} else {
